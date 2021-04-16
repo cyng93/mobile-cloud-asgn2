@@ -13,16 +13,16 @@ import com.google.common.base.Objects;
 
 /**
  * A simple object to represent a video and its URL for viewing.
- * 
+ *
  * You probably need to, at a minimum, add some annotations to this
  * class.
- * 
+ *
  * You are free to add annotations, members, and methods to this
  * class. However, you probably should not change the existing
  * methods or member variables. If you do change them, you need
  * to make sure that they are serialized into JSON in a way that
  * matches what is expected by the auto-grader.
- * 
+ *
  * @author mitchell
  */
 @Entity
@@ -36,10 +36,10 @@ public class Video {
 	private String url;
 	private long duration;
 	private long likes;
-	
+
 	@ElementCollection
 	private Set<String> likedBy = new HashSet<String>();
-	
+
 	public Video() {
 	}
 
@@ -86,23 +86,23 @@ public class Video {
 	public long getLikes() {
 		return likes;
 	}
-	
+
 	public void setLikes(long likes) {
 		this.likes = likes;
 	}
-	
+
 	public Set<String> getLikedBy() {
 		return likedBy;
 	}
-	
+
 	public void setLikedBy(Set<String> likedBy) {
 		this.likedBy = likedBy;
 	}
-	
+
 	/**
 	 * Two Videos will generate the same hashcode if they have exactly the same
 	 * values for their name, url, and duration.
-	 * 
+	 *
 	 */
 	@Override
 	public int hashCode() {
@@ -112,13 +112,13 @@ public class Video {
 	/**
 	 * Two Videos are considered equal if they have exactly the same values for
 	 * their name, url, and duration.
-	 * 
+	 *
 	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Video) {
 			Video other = (Video) obj;
-			
+
 			return Objects.equal(name, other.name)
 					&& Objects.equal(url, other.url)
 					&& duration == other.duration;

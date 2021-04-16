@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch AutoGrading",
+            "request": "launch",
+            "mainClass": "org.magnum.mobilecloud.video.AutoGrading",
+            "projectName": "mobile-cloud-asgn2"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<mobile-cloud-asgn2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "org.magnum.mobilecloud.video.Application",
+            "projectName": "mobile-cloud-asgn2",
+            "args": ""
+        }
+    ]
+}
